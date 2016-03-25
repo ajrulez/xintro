@@ -18,4 +18,13 @@ compile 'com.github.yonatankahana.xintro:lib:1.0'
 - [x] Set your page transformer for the ViewPager.
 
 ##Getting started
-Checkout the wiki: https://github.com/yonatankahana/xintro/wiki/
+Checkout the [wiki](https://github.com/yonatankahana/xintro/wiki/) for examples and getting started guide.
+
+##Compatibility
+XIntro can be used from min sdk 16.
+
+
+##Licenses
+[GNU GPL 3.0](http://www.gnu.org/licenses/gpl-3.0.en.html)
+[Glide](https://github.com/bumptech/glide/blob/master/LICENSE)
+[Picasso](https://github.com/square/picasso/blob/master/LICENSE.txt)
