@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Example</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="example_desc_1">XIntro is Android Java library for creating beautiful introduction to your applications.</string>
+    <string name="example_desc_2">Adjust the final product as you like. Change colors, text and image and create the first impression of your application.</string>
+    <string name="example_desc_3">You can create XintroActivity by extending it and override methods, or you can do it programmaticly with XintroActivityBuilder.</string>
+
+    <string-array name="pageTransformers">
+        <item>ParallaxPageTransformer (default)</item>
+        <item>DepthPageTransformer</item>
+        <item>FadeTransformer</item>
+        <item>RotatingTransformer</item>
+        <item>ZoomOutPageTransformer</item>
+    </string-array>
+
+    <string-array name="imageLoaders">
+        <item>GlideImageLoader (default)</item>
+        <item>PicassoImageLoader</item>
+        <item>SimpleImageLoader (not recommended)</item>
+    </string-array>
+
+</resources>
