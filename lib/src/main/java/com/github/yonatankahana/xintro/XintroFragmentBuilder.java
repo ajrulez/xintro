@@ -9,9 +9,8 @@ import com.github.yonatankahana.xintro.introduction.SimpleIntroFragment;
 import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
 
 /**
- * <b>XintroFragmentBuilder</b> is builder that helps to create
+ * XintroFragmentBuilder is builder that helps to create
  * IntroFragment instance with all the customizable options programmatically.
- * <p/>
  * Created by yonatan on 14/03/16.
  *
  * @author Yonatan Kahana

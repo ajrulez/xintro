@@ -9,7 +9,7 @@ import android.widget.ImageView;
  */
 public interface ImageLoader {
     /**
-     * This method should load the <b>drawable</b> to the <b>target</b> using the <b>context</b>.
+     * This method should load the drawable to the target using the context.
      *
      * @param context  the context
      * @param target   the target

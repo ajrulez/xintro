@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 /**
  * Load the images with the View.setImageDrawable();.
- * This is <b>NOT RECOMMENDED.</b>
+ * This is NOT RECOMMENDED.
  *
  * @see ImageLoader
  * @see GlideImageLoader

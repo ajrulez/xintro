@@ -19,7 +19,7 @@ import java.util.List;
  * With it, you can build yourself XIntro Activity with just one line.
  * No need to write code, just give parameters and you'll get a
  * full production-ready introduction to your application.
- * <p/>
+
  * Created by yonatan on 11/03/16.
  *
  * @author Yonatan Kahana

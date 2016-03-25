@@ -5,24 +5,6 @@ import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
-/**
- * This page transformer will create the effect that each page is an edge of a regular polygon
- * that is rotated to show each page. Can only be used on devices with Honeycomb or higher api
- * <p/>
- * Example usage:
- * <p/>
- * <p/>
- * <pre>
- * if(BUILD.VERSION.SDK_INT >= BUILD.VERSION_CODES.HONEYCOMB){
- *  mPager.setPageTransformer(true, new RotationPageTransformer(DEGREES_BETWEEN_CARDS));
- *  mPager.setOffscreenPageLimit(mPagerAdapter.getCount());
- *  mPager.setPageMargin(-2 * paddingOnPages);
- *  mPager.setClipChildren(false);
- * }
- * </pre>
- *
- * @author Steven Kideckel
- */
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class RotatingTransformer implements ViewPager.PageTransformer {
     private float minAlpha;

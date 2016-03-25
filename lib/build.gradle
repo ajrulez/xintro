@@ -1,5 +1,27 @@
 apply plugin: 'com.android.library'
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'xintro'
 
+    publishedGroupId = 'com.github.yonatankahana.xintro'
+    libraryName = 'lib'
+    artifact = 'lib'
+
+    libraryDescription = 'Android Java Library to application introductions'
+
+    siteUrl = 'https://github.com/yonatankahana/xintro'
+    gitUrl = 'https://github.com/yonatankahana/xintro.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'yonatankahana'
+    developerName = 'Yonatan Kahana'
+    developerEmail = 'yonatankahana.il@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -26,3 +48,7 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.github.bumptech.glide:glide:3.7.0'
 }
+
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

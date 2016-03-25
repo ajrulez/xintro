@@ -24,9 +24,9 @@ public abstract class IntroFragment extends Fragment implements Serializable {
 
     /**
      * This method should return the View to inflate for the IntroFragment.
-     * <p/>
-     * <b>Example:</b>
-     * <code>return inflater.inflate(R.layout.base_fragment_layout, container, false);</code>
+     *
+     * Example:
+     * return inflater.inflate(R.layout.base_fragment_layout, container, false);
      *
      * @param inflater  the inflater
      * @param container the container
@@ -92,7 +92,6 @@ public abstract class IntroFragment extends Fragment implements Serializable {
 
     /**
      * This method should initialize its components and sets all the variables.
-     * <p/>
      * This method must add its components and call for the setters by the parameters of introFragmentModel.
      *
      * @param view               the view

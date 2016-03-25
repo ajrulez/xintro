@@ -6,7 +6,7 @@ import android.view.View;
 import com.github.yonatankahana.xintro.R;
 
 /**
- * <u><b>NOTE:</b></u><b> it will only work with SimpleIntroFragment implementation.</b>
+ * NOTE: it will only work with SimpleIntroFragment implementation.
  *
  * @see com.github.yonatankahana.xintro.introduction.SimpleIntroFragment
  */

@@ -350,20 +350,17 @@ public class XintroActivity extends FragmentActivity {
     }
 
     /**
-     * Initialize your activity with your options.<br/>
-     * <b>This method must call the super method - FIRST OF ALL.</b>
-     * <p/>
+     * Initialize your activity with your options.
+     * This method must call the super method - FIRST OF ALL.
      * You must add fragments to the activity
-     * <p/>
-     * <b>Common setters:</b><br/>
-     * {@link #setPageTransformer(ViewPager.PageTransformer)} <br/>
-     * {@link #setCustomImageLoader(ImageLoader)}<br/>
-     * {@link #setIntroFragmentModelsList(List)}<br/>
-     * {@link #setOnIntroductionFinishedListener(OnIntroductionFinishedListener)}<br/>
-     * {@link #setOnFragmentChangedListener(OnFragmentChangedListener)}<br/>
-     * {@link #useDefaultImageLoader()}<br/>
-     * {@link #useGlideImageLoader()}<br/>
-     * {@link #usePicassoImageLoader()}<br/>
+     * Common setters:
+     * {@link #setCustomImageLoader(ImageLoader)}
+     * {@link #setIntroFragmentModelsList(List)}
+     * {@link #setOnIntroductionFinishedListener(OnIntroductionFinishedListener)}
+     * {@link #setOnFragmentChangedListener(OnFragmentChangedListener)}
+     * {@link #useDefaultImageLoader()}
+     * {@link #useGlideImageLoader()}
+     * {@link #usePicassoImageLoader()}
      * {@link #useSimpleImageLoader()}
      */
     @CallSuper
@@ -417,7 +414,6 @@ public class XintroActivity extends FragmentActivity {
     public interface OnIntroductionFinishedListener {
         /**
          * On introduction finished method.
-         * <p/>
          * Default:
          * <code>activity.finish();</code>
          *
@@ -434,8 +430,8 @@ public class XintroActivity extends FragmentActivity {
          * This event called when the fragment change in the XIntro activity.
          *
          * @param context the context of the activity.
-         * @param from    the <b>from</b> position
-         * @param to      the <b>to</b> position.
+         * @param from    the from position
+         * @param to      the to position.
          */
         void onFragmentChangedListener(Context context, int from, int to);
     }
