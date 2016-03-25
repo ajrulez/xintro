@@ -18,4 +18,4 @@ compile 'com.github.yonatankahana.xintro:lib:1.0'
 - [x] Set your page transformer for the ViewPager.
 
 ##Getting started
-Goto the WIKI - Get started page.
+Checkout the wiki: https://github.com/yonatankahana/xintro/wiki/
