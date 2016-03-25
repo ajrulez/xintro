@@ -1,6 +1,8 @@
 # XIntro - Java Android Library
 **XIntro** is a Java Android Library for android developers. The library use to build introduction activity for android application.
 
+![example image](http://up416.siz.co.il/up1/5ymwjnndjylv.png "Example image")
+
 ##Notes
 1. This project is still in DEVELOPMENT
 2. The wiki is still in progress...
