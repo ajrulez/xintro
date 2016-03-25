@@ -195,11 +195,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         XintroActivityBuilder.with(this)
                 .setPageTransformer(mPageTransformer)
                 .withCustomImageLoader(mImageLoader)
-                .addSlides(createSlides())
+                .addFragments(createFragments())
                 .introduce();
     }
 
-    private List<IntroFragmentModel> createSlides() {
+    private List<IntroFragmentModel> createFragments() {
         List<IntroFragmentModel> introFragmentModelList = new ArrayList<>();
 
         // first fragment

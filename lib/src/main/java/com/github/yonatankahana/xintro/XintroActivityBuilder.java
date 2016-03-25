@@ -56,7 +56,7 @@ public class XintroActivityBuilder {
      * @param introFragmentModel the introFragmentModel
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder addSlide(IntroFragmentModel introFragmentModel) {
+    public XintroActivityBuilder addFragment(IntroFragmentModel introFragmentModel) {
         introFragmentModelList.add(introFragmentModel);
         return this;
     }
@@ -67,7 +67,7 @@ public class XintroActivityBuilder {
      * @param introFragmentAttributes the introFragmentAttributes
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder addSlides(IntroFragmentModel... introFragmentAttributes) {
+    public XintroActivityBuilder addFragments(IntroFragmentModel... introFragmentAttributes) {
         for (IntroFragmentModel introFragmentAttribute : introFragmentAttributes) {
             introFragmentModelList.add(introFragmentAttribute);
         }
@@ -81,7 +81,7 @@ public class XintroActivityBuilder {
      * @param introFragmentAttributes the introFragmentAttributes
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder addSlides(List<IntroFragmentModel> introFragmentAttributes) {
+    public XintroActivityBuilder addFragments(List<IntroFragmentModel> introFragmentAttributes) {
         introFragmentModelList.addAll(introFragmentAttributes);
 
         return this;
@@ -93,19 +93,19 @@ public class XintroActivityBuilder {
      * @param introFragmentModel the introFragmentModel
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder removeSlide(IntroFragmentModel introFragmentModel) {
+    public XintroActivityBuilder removeFragment(IntroFragmentModel introFragmentModel) {
         introFragmentModelList.remove(introFragmentModel);
         return this;
     }
 
     /**
-     * Remove slide from xintro activity builder.
+     * Remove fragment from xintro activity builder.
      *
-     * @param slidePos the slide pos
+     * @param fragmentPos the fragment pos
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder removeSlide(int slidePos) {
-        introFragmentModelList.remove(slidePos);
+    public XintroActivityBuilder removeFragment(int fragmentPos) {
+        introFragmentModelList.remove(fragmentPos);
         return this;
     }
 
@@ -123,9 +123,9 @@ public class XintroActivityBuilder {
     }
 
     /**
-     * Sets slide list.
+     * Sets fragments list.
      *
-     * @param introFragmentModelList the slide list
+     * @param introFragmentModelList the fragments list
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
     public XintroActivityBuilder setIntroFragmentModelList(ArrayList<IntroFragmentModel> introFragmentModelList) {
@@ -136,7 +136,7 @@ public class XintroActivityBuilder {
     /**
      * Sets onFragmentChangedListener.
      *
-     * @param onFragmentChangedListener the on slide listener
+     * @param onFragmentChangedListener the on fragment changed listener
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      * @see XintroActivity.OnFragmentChangedListener
      */
