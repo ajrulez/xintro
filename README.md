@@ -7,7 +7,7 @@
 
 ##Gradle
 ```
-compile 'com.github.yonatankahana.xintro:lib:1.0'
+compile 'com.github.yonatankahana.xintro:lib:1.1'
 ```
 
 ##Features
