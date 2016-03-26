@@ -19,6 +19,16 @@ compile 'com.github.yonatankahana.xintro:lib:1.1'
 - [x] Create introduction by extending XintroActivity and override initialize() method.
 - [x] Set your page transformer for the ViewPager.
 
+##Milestones
+- [ ] Full RTL support
+- [ ] More fragment impl's for selection
+- [ ] Wiki pages
+- [ ] Supoort lower SDK levels
+
+
+##Report issue
+If you found any bug or any idea how to make this project better, please [Create an Issue](https://github.com/yonatankahana/xintro/issues/new).
+
 ##Getting started
 Checkout the [wiki](https://github.com/yonatankahana/xintro/wiki/) for examples and getting started guide.
 
@@ -32,5 +42,7 @@ XIntro can be used from min sdk 16.
 
 ##Licenses
 [GNU GPL 3.0](http://www.gnu.org/licenses/gpl-3.0.en.html)
+
 [Glide](https://github.com/bumptech/glide/blob/master/LICENSE)
+
 [Picasso](https://github.com/square/picasso/blob/master/LICENSE.txt)
