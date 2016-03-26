@@ -7,6 +7,10 @@
 1. This project is still in DEVELOPMENT
 2. The wiki is still in progress...
 
+##Example application 
+In the example application (in Google Play!) you can test the options that XIntro give you.
+[Download example application](https://play.google.com/store/apps/details?id=com.github.yonatankahana.introexample)
+
 ##Gradle
 ```
 compile 'com.github.yonatankahana.xintro:lib:1.1'
