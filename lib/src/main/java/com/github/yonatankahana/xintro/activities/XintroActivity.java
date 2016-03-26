@@ -66,7 +66,7 @@ public class XintroActivity extends FragmentActivity {
      * @param introFragmentModelsList the intro fragment model list
      */
     public void setIntroFragmentModelsList(List<IntroFragmentModel> introFragmentModelsList) {
-        introFragmentModelsList = introFragmentModelsList;
+        this.introFragmentModelsList = introFragmentModelsList;
     }
 
     /**

@@ -1,5 +1,6 @@
 package com.github.yonatankahana.introexample;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -125,6 +126,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case 4:
                         pageTransformer = new ZoomOutPageTransformer();
                         break;
+                    case 5:
+                        pageTransformer = null;
+                        break;
                 }
 
                 mPageTransformer = pageTransformer;
@@ -173,7 +177,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-
+            Intent intent = new Intent(this, MyIntroActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {

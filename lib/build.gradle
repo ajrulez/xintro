@@ -12,7 +12,7 @@ ext {
     siteUrl = 'https://github.com/yonatankahana/xintro'
     gitUrl = 'https://github.com/yonatankahana/xintro.git'
 
-    libraryVersion = '1.0'
+    libraryVersion = '1.1'
 
     developerId = 'yonatankahana'
     developerName = 'Yonatan Kahana'

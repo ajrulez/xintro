@@ -13,8 +13,9 @@
         <item>ParallaxPageTransformer (default)</item>
         <item>DepthPageTransformer</item>
         <item>FadeTransformer</item>
-        <item>RotatingTransformer</item>
+        <item>RotatingTransformer(130)</item>
         <item>ZoomOutPageTransformer</item>
+        <item>No page transformer</item>
     </string-array>
 
     <string-array name="imageLoaders">
