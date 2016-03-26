@@ -29,6 +29,12 @@ compile 'com.github.yonatankahana.xintro:lib:1.1'
 ##Report issue
 If you found any bug or any idea how to make this project better, please [Create an Issue](https://github.com/yonatankahana/xintro/issues/new).
 
+
+
+
+
+Tags: XIntro AppIntro android introduction library lib libs tools xintroduction easy builder
+
 ##Getting started
 Checkout the [wiki](https://github.com/yonatankahana/xintro/wiki/) for examples and getting started guide.
 
