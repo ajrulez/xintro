@@ -25,6 +25,10 @@ Checkout the [wiki](https://github.com/yonatankahana/xintro/wiki/) for examples 
 ##Compatibility
 XIntro can be used from min sdk 16.
 
+##Example
+![example gif](https://media.giphy.com/media/l2QZPBh8ls6mH8JO0/giphy.gif "Example gif")
+
+
 
 ##Licenses
 [GNU GPL 3.0](http://www.gnu.org/licenses/gpl-3.0.en.html)
