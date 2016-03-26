@@ -12,3 +12,6 @@ android:
     # The SDK version used to compile your project
     - android-23
 
+    # To fix the build-tools-23.0.2 bug.
+    - extra-android-m2repository
+
