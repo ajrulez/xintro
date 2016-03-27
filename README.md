@@ -13,7 +13,7 @@ In the example application (in Google Play!) you can test the options that XIntr
 
 ##Gradle
 ```
-compile 'com.github.yonatankahana.xintro:lib:1.1'
+compile 'com.github.yonatankahana.xintro:lib:1.2'
 ```
 
 ##Features
