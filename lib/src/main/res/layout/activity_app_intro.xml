@@ -13,11 +13,12 @@
     <RelativeLayout
         android:id="@+id/toolbarRelativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="90dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
-        android:elevation="4dp">
+        android:elevation="4dp"
+        android:paddingBottom="30dp">
 
         <ImageButton
             android:id="@+id/nextButton"
