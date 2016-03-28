@@ -1,6 +1,17 @@
 # XIntro - Java Android Library
 **XIntro** is a Java Android Library for android developers. The library use to build introduction activity for android application.
 
+[![Maven Central Status](https://img.shields.io/badge/Maven%20Central-UP-brightgreen.svg)]([maven])
+[![jCenter Status](https://img.shields.io/badge/jCenter-UP-brightgreen.svg)]([jCenter])
+[![GitHub Status](https://img.shields.io/badge/GitHub-UP-brightgreen.svg)]([GitHub])
+[![Project status](https://img.shields.io/badge/Project%20Status-Development-yellow.svg)]()
+[![Project version](https://img.shields.io/badge/Version-1.0-blue.svg)]()
+
+[maven]: ##Maven (for the oldfags)
+[jCenter]: ##Gradle
+[GitHub]: https://github.com/yonatankahana/xintro
+
+
 ![example image](http://up416.siz.co.il/up2/mkvkyjnyznjq.png "Example image")
 
 ##Notes
@@ -16,6 +27,15 @@ In the example application (in Google Play!) you can test the options that XIntr
 compile 'com.github.yonatankahana:xintro:1.0'
 ```
 
+##Maven (for the oldfags)
+```
+<dependency>
+  <groupId>com.github.yonatankahana</groupId>
+  <artifactId>xintro</artifactId>
+  <version>1.0</version>
+  <type>pom</type>
+</dependency>
+```
 ##Features
 - [x] Fully customizable: alot of parameters to customize a beautiful introduction.
 - [x] Using Glide as default image loader: (has option to change to PicassoImageLoader and SimpleImageLoader) or creating custom image loader.
