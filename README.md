@@ -7,8 +7,8 @@
 [![Project status](https://img.shields.io/badge/Project%20Status-Development-yellow.svg)]()
 [![Project version](https://img.shields.io/badge/Version-1.0-blue.svg)]()
 
-[maven]: ##Maven (for the oldfags)
-[jCenter]: ##Gradle
+[maven]: #Maven (for the oldfags)
+[jCenter]: #Gradle
 [GitHub]: https://github.com/yonatankahana/xintro
 
 
