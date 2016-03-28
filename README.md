@@ -7,8 +7,8 @@
 [![Project status](https://img.shields.io/badge/Project%20Status-Development-yellow.svg)]()
 [![Project version](https://img.shields.io/badge/Version-1.0-blue.svg)]()
 
-[maven]: #Maven (for the oldfags)
-[jCenter]: #Gradle
+[maven]: #maven
+[jCenter]: #gradle
 [GitHub]: https://github.com/yonatankahana/xintro
 
 
@@ -22,12 +22,12 @@
 In the example application (in Google Play!) you can test the options that XIntro give you.
 [Download example application](https://play.google.com/store/apps/details?id=com.github.yonatankahana.introexample)
 
-##Gradle
+## <a id="gradle">Gradle
 ```
 compile 'com.github.yonatankahana:xintro:1.0'
 ```
 
-##Maven (for the oldfags)
+## <a id="maven">Maven (for the oldfags)
 ```
 <dependency>
   <groupId>com.github.yonatankahana</groupId>
