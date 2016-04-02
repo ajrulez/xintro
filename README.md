@@ -3,6 +3,7 @@
 
 [![Maven Central Status](https://img.shields.io/badge/Maven%20Central-UP-brightgreen.svg)]([maven])
 [![jCenter Status](https://img.shields.io/badge/jCenter-UP-brightgreen.svg)]([jCenter])
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-XIntro%20-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3368)
 [![GitHub Status](https://img.shields.io/badge/GitHub-UP-brightgreen.svg)]([GitHub])
 [![Project status](https://img.shields.io/badge/Project%20Status-Development-yellow.svg)]()
 [![Project version](https://img.shields.io/badge/Version-1.0-blue.svg)]()
