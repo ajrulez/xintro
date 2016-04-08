@@ -6,7 +6,7 @@
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-XIntro%20-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3368)
 [![GitHub Status](https://img.shields.io/badge/GitHub-UP-brightgreen.svg)]([GitHub])
 [![Project status](https://img.shields.io/badge/Project%20Status-Development-yellow.svg)]()
-[![Project version](https://img.shields.io/badge/Version-1.0-blue.svg)]()
+[![Project version](https://img.shields.io/badge/Version-1.1-blue.svg)]()
 
 [maven]: #maven
 [jCenter]: #gradle
@@ -25,7 +25,7 @@ In the example application (in Google Play!) you can test the options that XIntr
 
 ## <a id="gradle">Gradle
 ```
-compile 'com.github.yonatankahana:xintro:1.0'
+compile 'com.github.yonatankahana:xintro:1.1'
 ```
 
 ## <a id="maven">Maven (for the oldfags)
@@ -33,7 +33,7 @@ compile 'com.github.yonatankahana:xintro:1.0'
 <dependency>
   <groupId>com.github.yonatankahana</groupId>
   <artifactId>xintro</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <type>pom</type>
 </dependency>
 ```
