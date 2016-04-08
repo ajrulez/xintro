@@ -53,8 +53,9 @@ public class XintroFragmentBuilder {
      * @see SimpleIntroFragment
      * @see IntroFragment
      */
-    public void setIntroFragment(@Nullable IntroFragment introFragment) {
+    public XintroFragmentBuilder setIntroFragment(@Nullable IntroFragment introFragment) {
         this.introFragment = introFragment;
+        return this;
     }
 
     /**

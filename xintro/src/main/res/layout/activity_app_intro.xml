@@ -18,8 +18,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
-        android:background="@android:color/transparent"
-        android:elevation="4dp">
+        android:background="@android:color/transparent">
 
         <ImageButton
             android:id="@+id/nextButton"
@@ -30,6 +29,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:background="@null"
+            android:contentDescription="Next"
             android:src="@drawable/ic_arrow_forward_white_24dp" />
 
         <ImageButton
@@ -42,6 +42,7 @@
             android:layout_alignParentTop="true"
             android:alpha="0"
             android:background="@null"
+            android:contentDescription="Previous"
             android:src="@drawable/ic_arrow_back_white_24dp" />
 
         <LinearLayout
