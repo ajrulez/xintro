@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
     tools:context=".activities.XintroActivity">
 
     <android.support.v4.view.ViewPager
@@ -13,16 +14,16 @@
     <RelativeLayout
         android:id="@+id/toolbarRelativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
         android:background="@android:color/transparent"
-        android:elevation="4dp"
-        android:paddingBottom="30dp">
+        android:elevation="4dp">
 
         <ImageButton
             android:id="@+id/nextButton"
-            android:layout_width="60dp"
+            android:layout_width="45dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
@@ -33,7 +34,7 @@
 
         <ImageButton
             android:id="@+id/prevButton"
-            android:layout_width="60dp"
+            android:layout_width="45dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
