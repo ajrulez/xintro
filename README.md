@@ -61,7 +61,7 @@ Checkout the [wiki](https://github.com/yonatankahana/xintro/wiki/) for examples 
 XIntro can be used from min sdk 16.
 
 ##Example
-![example gif](http://i.giphy.com/l4hLMr2VC8WHcp7Z6.gif "Example gif")
+![example gif](http://i.giphy.com/3oGRFqJHpzI8Uj6nni.gif "Example gif")
 
 
 
