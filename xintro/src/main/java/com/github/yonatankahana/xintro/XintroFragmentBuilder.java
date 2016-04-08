@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 
+import com.github.yonatankahana.xintro.introduction.ImageOnlyIntroFragment;
 import com.github.yonatankahana.xintro.introduction.IntroFragment;
 import com.github.yonatankahana.xintro.introduction.SimpleIntroFragment;
 import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
@@ -17,6 +18,7 @@ import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
  * @see IntroFragment
  * @see IntroFragmentModel
  * @see SimpleIntroFragment
+ * @see ImageOnlyIntroFragment
  */
 public class XintroFragmentBuilder {
     private String title;
@@ -52,6 +54,7 @@ public class XintroFragmentBuilder {
      * @param introFragment the intro fragment
      * @see SimpleIntroFragment
      * @see IntroFragment
+     * @since 1.1
      */
     public XintroFragmentBuilder setIntroFragment(@Nullable IntroFragment introFragment) {
         this.introFragment = introFragment;

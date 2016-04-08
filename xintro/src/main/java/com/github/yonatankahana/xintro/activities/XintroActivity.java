@@ -26,6 +26,7 @@ import com.github.yonatankahana.xintro.imageloaders.PicassoImageLoader;
 import com.github.yonatankahana.xintro.imageloaders.SimpleImageLoader;
 import com.github.yonatankahana.xintro.introduction.IntroFragment;
 import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
+import com.github.yonatankahana.xintro.templates.Template;
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
@@ -208,9 +209,9 @@ public class XintroActivity extends FragmentActivity {
 
                 if (position != lastPosition) {
                     if (position < lastPosition) {
-                        performOnSlideListener(getApplicationContext(), position, position - 1);
+                        performOnFragmentChangedListener(getApplicationContext(), position, position - 1);
                     } else {
-                        performOnSlideListener(getApplicationContext(), position, position + 1);
+                        performOnFragmentChangedListener(getApplicationContext(), position, position + 1);
                     }
                 }
             }
@@ -292,7 +293,7 @@ public class XintroActivity extends FragmentActivity {
             performOnIntroductionFinished();
         } else {
             mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1, true);
-            performOnSlideListener(getApplicationContext(), mViewPager.getCurrentItem(), mViewPager.getCurrentItem() + 1);
+            performOnFragmentChangedListener(getApplicationContext(), mViewPager.getCurrentItem(), mViewPager.getCurrentItem() + 1);
         }
     }
 
@@ -304,7 +305,7 @@ public class XintroActivity extends FragmentActivity {
             // no back
         } else {
             mViewPager.setCurrentItem(mViewPager.getCurrentItem() - 1, true);
-            performOnSlideListener(getApplicationContext(), mViewPager.getCurrentItem(), mViewPager.getCurrentItem() - 1);
+            performOnFragmentChangedListener(getApplicationContext(), mViewPager.getCurrentItem(), mViewPager.getCurrentItem() - 1);
         }
     }
 
@@ -317,17 +318,25 @@ public class XintroActivity extends FragmentActivity {
     /**
      * Perform on introduction finished.
      */
-    public void performOnIntroductionFinished() {
+    private void performOnIntroductionFinished() {
         if (onIntroductionFinishedListener == null) {
             finish();
         } else {
             onIntroductionFinishedListener.OnIntroductionFinished(this);
         }
+
+        for (Template template : AppStaticContext.templates) {
+            template.OnIntroductionFinished(this);
+        }
     }
 
-    private void performOnSlideListener(Context context, int from, int to) {
+    private void performOnFragmentChangedListener(Context context, int from, int to) {
         if (onFragmentChangedListener != null) {
             onFragmentChangedListener.onFragmentChangedListener(context, from, to);
+        }
+
+        for (Template template : AppStaticContext.templates) {
+            template.onFragmentChangedListener(context, from, to);
         }
     }
 
@@ -365,6 +374,8 @@ public class XintroActivity extends FragmentActivity {
      */
     @CallSuper
     public void initialize() {
+        AppStaticContext.introductionActivity = this;
+
         if (AppStaticContext.introFragmentModelArrayList != null) {
             introFragmentModelsList = AppStaticContext.introFragmentModelArrayList;
         }

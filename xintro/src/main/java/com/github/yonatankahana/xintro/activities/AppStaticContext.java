@@ -1,11 +1,13 @@
 package com.github.yonatankahana.xintro.activities;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 
 import com.github.yonatankahana.xintro.imageloaders.ImageLoader;
 import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
+import com.github.yonatankahana.xintro.templates.Template;
 
 import java.util.ArrayList;
 
@@ -25,4 +27,6 @@ public class AppStaticContext {
     public static XintroActivity.OnIntroductionFinishedListener onIntroductionFinishedListener;
     public static ImageLoader customImageLoader;
     public static Context callerContext;
+    public static Activity introductionActivity;
+    public static ArrayList<Template> templates = new ArrayList<>();
 }

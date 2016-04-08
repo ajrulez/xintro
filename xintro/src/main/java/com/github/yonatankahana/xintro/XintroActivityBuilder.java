@@ -9,6 +9,7 @@ import com.github.yonatankahana.xintro.activities.AppStaticContext;
 import com.github.yonatankahana.xintro.activities.XintroActivity;
 import com.github.yonatankahana.xintro.imageloaders.ImageLoader;
 import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
+import com.github.yonatankahana.xintro.templates.Template;
 import com.github.yonatankahana.xintro.transformers.ZoomOutPageTransformer;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ import java.util.List;
  * With it, you can build yourself XIntro Activity with just one line.
  * No need to write code, just give parameters and you'll get a
  * full production-ready introduction to your application.
-
+ * <p>
  * Created by yonatan on 11/03/16.
  *
  * @author Yonatan Kahana
@@ -34,6 +35,7 @@ public class XintroActivityBuilder {
     @Nullable
     private XintroActivity.OnIntroductionFinishedListener onIntroductionFinishedListener = null;
     private ImageLoader customImageLoader;
+    private ArrayList<Template> templates = new ArrayList<>();
 
     private XintroActivityBuilder(Context context) {
         mContext = context;
@@ -170,6 +172,56 @@ public class XintroActivityBuilder {
     }
 
     /**
+     * Add template to the activity.
+     *
+     * @param template the template
+     * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
+     */
+    public XintroActivityBuilder addTemplate(Template template) {
+        this.templates.add(template);
+        return this;
+    }
+
+    /**
+     * Remove template from the activity by template object.
+     *
+     * @param template the template to remove
+     * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
+     */
+    public XintroActivityBuilder removeTemplate(Template template) {
+        this.templates.remove(template);
+        return this;
+    }
+
+    /**
+     * Remove template from the activity by index.
+     *
+     * @param template the template index (int)
+     * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
+     */
+    public XintroActivityBuilder removeTemplate(int template) {
+        this.templates.remove(template);
+        return this;
+    }
+
+
+    /**
+     * Sets templates from array list.
+     * Null parameter will produce empty templates list.
+     *
+     * @param templates the templates list.
+     * @return the templates
+     */
+    public XintroActivityBuilder setTemplates(@Nullable ArrayList<Template> templates) {
+        if (templates == null) {
+            templates = new ArrayList<>();
+        }
+
+        this.templates = templates;
+        return this;
+    }
+
+    /**
      * Compile to intent.
      *
      * @return the intent
@@ -181,6 +233,8 @@ public class XintroActivityBuilder {
         AppStaticContext.pageTransformer = pageTransformer;
         AppStaticContext.customImageLoader = customImageLoader;
         AppStaticContext.callerContext = mContext;
+        AppStaticContext.templates = templates;
+
 
         XintroActivity xintroActivity = new XintroActivity();
         Intent intent = new Intent(mContext, xintroActivity.getClass());
