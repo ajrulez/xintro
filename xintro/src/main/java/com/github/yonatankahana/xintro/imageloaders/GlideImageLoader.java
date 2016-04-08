@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
  * @since 1.0
  */
 public class GlideImageLoader implements ImageLoader {
+
     @Override
     public void loadImage(Context context, ImageView target, @DrawableRes int drawable) {
         Glide.with(context).load(drawable).into(target);

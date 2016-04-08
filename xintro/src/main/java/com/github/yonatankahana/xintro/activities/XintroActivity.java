@@ -252,7 +252,7 @@ public class XintroActivity extends FragmentActivity {
     }
 
     private void toggleFinishIcon(final boolean isFinish) {
-        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(nextButton, View.ROTATION, isFinish ? 360 : 0);
+        final ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(nextButton, View.ROTATION, isFinish ? 360 : 0);
         objectAnimator.setDuration(500);
         objectAnimator.addListener(new Animator.AnimatorListener() {
             @Override
@@ -263,7 +263,7 @@ public class XintroActivity extends FragmentActivity {
                     public void run() {
                         nextButton.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), isFinish ? R.drawable.ic_done_white_24dp : R.drawable.ic_arrow_forward_white_24dp));
                     }
-                }, 250);
+                }, objectAnimator.getDuration() / 2);
             }
 
             @Override
