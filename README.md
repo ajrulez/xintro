@@ -13,7 +13,7 @@
 [GitHub]: https://github.com/yonatankahana/xintro
 
 
-![example image](http://up416.siz.co.il/up2/mkvkyjnyznjq.png "Example image")
+![example image](http://up416.siz.co.il/up2/dm4ttemzgmyx.png "Example image")
 
 ##Notes
 1. This project is still in DEVELOPMENT
@@ -61,7 +61,7 @@ Checkout the [wiki](https://github.com/yonatankahana/xintro/wiki/) for examples 
 XIntro can be used from min sdk 16.
 
 ##Example
-![example gif](https://media.giphy.com/media/l2QZPBh8ls6mH8JO0/giphy.gif "Example gif")
+![example gif](http://i.giphy.com/l4hLMr2VC8WHcp7Z6.gif "Example gif")
 
 
 
