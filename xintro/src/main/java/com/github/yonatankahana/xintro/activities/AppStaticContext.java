@@ -5,9 +5,9 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 
+import com.github.yonatankahana.xintro.actionstemplate.ActionTemplate;
 import com.github.yonatankahana.xintro.imageloaders.ImageLoader;
 import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
-import com.github.yonatankahana.xintro.templates.Template;
 
 import java.util.ArrayList;
 
@@ -28,5 +28,5 @@ public class AppStaticContext {
     public static ImageLoader customImageLoader;
     public static Context callerContext;
     public static Activity introductionActivity;
-    public static ArrayList<Template> templates = new ArrayList<>();
+    public static ArrayList<ActionTemplate> actionTemplates = new ArrayList<>();
 }

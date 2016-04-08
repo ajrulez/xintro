@@ -5,11 +5,11 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 
+import com.github.yonatankahana.xintro.actionstemplate.ActionTemplate;
 import com.github.yonatankahana.xintro.activities.AppStaticContext;
 import com.github.yonatankahana.xintro.activities.XintroActivity;
 import com.github.yonatankahana.xintro.imageloaders.ImageLoader;
 import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
-import com.github.yonatankahana.xintro.templates.Template;
 import com.github.yonatankahana.xintro.transformers.ZoomOutPageTransformer;
 
 import java.util.ArrayList;
@@ -35,7 +35,7 @@ public class XintroActivityBuilder {
     @Nullable
     private XintroActivity.OnIntroductionFinishedListener onIntroductionFinishedListener = null;
     private ImageLoader customImageLoader;
-    private ArrayList<Template> templates = new ArrayList<>();
+    private ArrayList<ActionTemplate> actionTemplates = new ArrayList<>();
 
     private XintroActivityBuilder(Context context) {
         mContext = context;
@@ -172,52 +172,52 @@ public class XintroActivityBuilder {
     }
 
     /**
-     * Add template to the activity.
+     * Add action template to the activity.
      *
-     * @param template the template
+     * @param actionTemplate the action template
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder addTemplate(Template template) {
-        this.templates.add(template);
+    public XintroActivityBuilder addActionTemplate(ActionTemplate actionTemplate) {
+        this.actionTemplates.add(actionTemplate);
         return this;
     }
 
     /**
-     * Remove template from the activity by template object.
+     * Remove action template from the activity by action template object.
      *
-     * @param template the template to remove
+     * @param actionTemplate the action template to remove
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder removeTemplate(Template template) {
-        this.templates.remove(template);
+    public XintroActivityBuilder removeActionTemplate(ActionTemplate actionTemplate) {
+        this.actionTemplates.remove(actionTemplate);
         return this;
     }
 
     /**
-     * Remove template from the activity by index.
+     * Remove action template from the activity by index.
      *
-     * @param template the template index (int)
+     * @param actionTemplateIndex the action template index (int)
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder removeTemplate(int template) {
-        this.templates.remove(template);
+    public XintroActivityBuilder removeActionTemplate(int actionTemplateIndex) {
+        this.actionTemplates.remove(actionTemplateIndex);
         return this;
     }
 
 
     /**
-     * Sets templates from array list.
-     * Null parameter will produce empty templates list.
+     * Sets action templates from array list.
+     * Null parameter will produce empty action templates list.
      *
-     * @param templates the templates list.
-     * @return the templates
+     * @param actionTemplates the action templates list.
+     * @return the actionTemplates
      */
-    public XintroActivityBuilder setTemplates(@Nullable ArrayList<Template> templates) {
-        if (templates == null) {
-            templates = new ArrayList<>();
+    public XintroActivityBuilder setActionTemplates(@Nullable ArrayList<ActionTemplate> actionTemplates) {
+        if (actionTemplates == null) {
+            actionTemplates = new ArrayList<>();
         }
 
-        this.templates = templates;
+        this.actionTemplates = actionTemplates;
         return this;
     }
 
@@ -233,7 +233,7 @@ public class XintroActivityBuilder {
         AppStaticContext.pageTransformer = pageTransformer;
         AppStaticContext.customImageLoader = customImageLoader;
         AppStaticContext.callerContext = mContext;
-        AppStaticContext.templates = templates;
+        AppStaticContext.actionTemplates = actionTemplates;
 
 
         XintroActivity xintroActivity = new XintroActivity();

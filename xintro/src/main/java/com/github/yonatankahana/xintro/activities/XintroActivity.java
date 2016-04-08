@@ -20,13 +20,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.github.yonatankahana.xintro.R;
+import com.github.yonatankahana.xintro.actionstemplate.ActionTemplate;
 import com.github.yonatankahana.xintro.imageloaders.GlideImageLoader;
 import com.github.yonatankahana.xintro.imageloaders.ImageLoader;
 import com.github.yonatankahana.xintro.imageloaders.PicassoImageLoader;
 import com.github.yonatankahana.xintro.imageloaders.SimpleImageLoader;
 import com.github.yonatankahana.xintro.introduction.IntroFragment;
 import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
-import com.github.yonatankahana.xintro.templates.Template;
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
@@ -325,8 +325,8 @@ public class XintroActivity extends FragmentActivity {
             onIntroductionFinishedListener.OnIntroductionFinished(this);
         }
 
-        for (Template template : AppStaticContext.templates) {
-            template.OnIntroductionFinished(this);
+        for (ActionTemplate actionTemplate : AppStaticContext.actionTemplates) {
+            actionTemplate.OnIntroductionFinished(this);
         }
     }
 
@@ -335,8 +335,8 @@ public class XintroActivity extends FragmentActivity {
             onFragmentChangedListener.onFragmentChangedListener(context, from, to);
         }
 
-        for (Template template : AppStaticContext.templates) {
-            template.onFragmentChangedListener(context, from, to);
+        for (ActionTemplate actionTemplate : AppStaticContext.actionTemplates) {
+            actionTemplate.onFragmentChangedListener(context, from, to);
         }
     }
 
