@@ -1,26 +1,26 @@
-package com.github.yonatankahana.xintro.introduction.entities;
+package com.github.yonatankahana.xintro.introfragment.entities;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.github.yonatankahana.xintro.introduction.IntroFragment;
+import com.github.yonatankahana.xintro.introfragment.IntroFragment;
 
 /**
  * Created by yonatan on 08/03/16.
  */
-public class IntroFragmentModel implements Parcelable {
+public class IntroFragmentEntity implements Parcelable {
     /**
      * Created by the Parcelable implementation.
      */
-    public static final Creator<IntroFragmentModel> CREATOR = new Creator<IntroFragmentModel>() {
+    public static final Creator<IntroFragmentEntity> CREATOR = new Creator<IntroFragmentEntity>() {
         @Override
-        public IntroFragmentModel createFromParcel(Parcel in) {
-            return new IntroFragmentModel(in);
+        public IntroFragmentEntity createFromParcel(Parcel in) {
+            return new IntroFragmentEntity(in);
         }
 
         @Override
-        public IntroFragmentModel[] newArray(int size) {
-            return new IntroFragmentModel[size];
+        public IntroFragmentEntity[] newArray(int size) {
+            return new IntroFragmentEntity[size];
         }
     };
 
@@ -46,7 +46,7 @@ public class IntroFragmentModel implements Parcelable {
      * @param descriptionTextColor the description text color
      * @see com.github.yonatankahana.xintro.XintroFragmentBuilder
      */
-    public IntroFragmentModel(IntroFragment fragment, String title, String description, int image, int backgroundColor, int imageElevation, int titleTextColor, int descriptionTextColor) {
+    public IntroFragmentEntity(IntroFragment fragment, String title, String description, int image, int backgroundColor, int imageElevation, int titleTextColor, int descriptionTextColor) {
         this.fragment = fragment;
         this.title = title;
         this.description = description;
@@ -62,7 +62,7 @@ public class IntroFragmentModel implements Parcelable {
      *
      * @param fragment the fragment
      */
-    public IntroFragmentModel(IntroFragment fragment) {
+    public IntroFragmentEntity(IntroFragment fragment) {
         this.fragment = fragment;
     }
 
@@ -71,7 +71,7 @@ public class IntroFragmentModel implements Parcelable {
      *
      * @param in the Parcel
      */
-    protected IntroFragmentModel(Parcel in) {
+    protected IntroFragmentEntity(Parcel in) {
         title = in.readString();
         description = in.readString();
         image = in.readInt();

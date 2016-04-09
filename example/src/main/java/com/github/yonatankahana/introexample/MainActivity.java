@@ -23,7 +23,7 @@ import com.github.yonatankahana.xintro.imageloaders.GlideImageLoader;
 import com.github.yonatankahana.xintro.imageloaders.ImageLoader;
 import com.github.yonatankahana.xintro.imageloaders.PicassoImageLoader;
 import com.github.yonatankahana.xintro.imageloaders.SimpleImageLoader;
-import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
+import com.github.yonatankahana.xintro.introfragment.entities.IntroFragmentEntity;
 import com.github.yonatankahana.xintro.transformers.DepthPageTransformer;
 import com.github.yonatankahana.xintro.transformers.FadeTransformer;
 import com.github.yonatankahana.xintro.transformers.ParallaxPageTransformer;
@@ -199,11 +199,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .introduce();
     }
 
-    private List<IntroFragmentModel> createFragments() {
-        List<IntroFragmentModel> introFragmentModelList = new ArrayList<>();
+    private List<IntroFragmentEntity> createFragments() {
+        List<IntroFragmentEntity> introFragmentEntityList = new ArrayList<>();
 
         // first fragment
-        introFragmentModelList.add(XintroFragmentBuilder.build()
+        introFragmentEntityList.add(XintroFragmentBuilder.build()
                 .setTitle("Welcome to the XIntro Sample")
                 .setDescription(getString(R.string.example_desc_1))
                 .setImage(R.drawable.goose)
@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .compile());
 
         // second fragment
-        introFragmentModelList.add(XintroFragmentBuilder.build()
+        introFragmentEntityList.add(XintroFragmentBuilder.build()
                 .setTitle("Fully customizable")
                 .setDescription(getString(R.string.example_desc_2))
                 .setDescriptionTextColor(Color.BLACK)
@@ -221,14 +221,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .compile());
 
         // third fragment
-        introFragmentModelList.add(XintroFragmentBuilder.build()
+        introFragmentEntityList.add(XintroFragmentBuilder.build()
                 .setTitle("Easy to use")
                 .setDescription(getString(R.string.example_desc_3))
                 .setBackgroundColor(Color.parseColor("#4CAF50"))
                 .setImage(R.drawable.example_image_3)
                 .compile());
 
-        return introFragmentModelList;
+        return introFragmentEntityList;
     }
 
 

@@ -1,4 +1,4 @@
-package com.github.yonatankahana.xintro.introduction;
+package com.github.yonatankahana.xintro.introfragment;
 
 import android.os.Bundle;
 import android.support.annotation.DrawableRes;
@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
+import com.github.yonatankahana.xintro.introfragment.entities.IntroFragmentEntity;
 
 import java.io.Serializable;
 import java.security.InvalidParameterException;
@@ -20,7 +20,7 @@ public abstract class IntroFragment extends Fragment implements Serializable {
     /**
      * The Intro fragment model object.
      */
-    protected IntroFragmentModel introFragmentModelObject;
+    protected IntroFragmentEntity introFragmentEntityObject;
 
     /**
      * This method should return the View to inflate for the IntroFragment.
@@ -92,13 +92,13 @@ public abstract class IntroFragment extends Fragment implements Serializable {
 
     /**
      * This method should initialize its components and sets all the variables.
-     * This method must add its components and call for the setters by the parameters of introFragmentModel.
+     * This method must add its components and call for the setters by the parameters of introFragmentEntity.
      *
      * @param view               the view
-     * @param introFragmentModel the intro fragment model
+     * @param introFragmentEntity the intro fragment model
      * @see SimpleIntroFragment
      */
-    public abstract void initialize(View view, IntroFragmentModel introFragmentModel);
+    public abstract void initialize(View view, IntroFragmentEntity introFragmentEntity);
 
     @Nullable
     @Override
@@ -106,12 +106,12 @@ public abstract class IntroFragment extends Fragment implements Serializable {
         View view = getViewToInflate(inflater, container);
         Bundle bundle = this.getArguments();
         if (bundle != null) {
-            introFragmentModelObject = (IntroFragmentModel) bundle.get("introFragmentModelObject");
+            introFragmentEntityObject = (IntroFragmentEntity) bundle.get("introFragmentEntityObject");
         } else {
-            throw new InvalidParameterException("Unable to create IntroFragment without 'introFragmentModelObject' bundle as parameter for the fragment.");
+            throw new InvalidParameterException("Unable to create IntroFragment without 'introFragmentEntityObject' bundle as parameter for the fragment.");
         }
 
-        initialize(view, introFragmentModelObject);
+        initialize(view, introFragmentEntityObject);
 
         return view;
     }

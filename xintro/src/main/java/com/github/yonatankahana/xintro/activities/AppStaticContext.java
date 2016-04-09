@@ -7,7 +7,7 @@ import android.support.v4.view.ViewPager;
 
 import com.github.yonatankahana.xintro.actionstemplate.ActionTemplate;
 import com.github.yonatankahana.xintro.imageloaders.ImageLoader;
-import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
+import com.github.yonatankahana.xintro.introfragment.entities.IntroFragmentEntity;
 
 import java.util.ArrayList;
 
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 //TODO: remove this hack class.
 public class AppStaticContext {
     @Nullable
-    public static ArrayList<IntroFragmentModel> introFragmentModelArrayList;
+    public static ArrayList<IntroFragmentEntity> introFragmentEntityArrayList;
     @Nullable
     public static ViewPager.PageTransformer pageTransformer;
     @Nullable

@@ -8,7 +8,7 @@ import com.github.yonatankahana.xintro.R;
 /**
  * NOTE: it will only work with SimpleIntroFragment implementation.
  *
- * @see com.github.yonatankahana.xintro.introduction.SimpleIntroFragment
+ * @see com.github.yonatankahana.xintro.introfragment.SimpleIntroFragment
  */
 public class ParallaxPageTransformer implements ViewPager.PageTransformer {
 

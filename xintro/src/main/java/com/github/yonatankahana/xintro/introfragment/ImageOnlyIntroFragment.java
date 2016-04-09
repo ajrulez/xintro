@@ -1,36 +1,36 @@
-package com.github.yonatankahana.xintro.introduction;
+package com.github.yonatankahana.xintro.introfragment;
 
 import android.annotation.TargetApi;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.github.yonatankahana.xintro.R;
 import com.github.yonatankahana.xintro.activities.AppStaticContext;
 import com.github.yonatankahana.xintro.imageloaders.GlideImageLoader;
-import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
+import com.github.yonatankahana.xintro.introfragment.entities.IntroFragmentEntity;
 
 /**
- * Created by yonatan on 08/03/16.
+ * ImageOnly Introduction Fragment.
+ *
+ * @see SimpleIntroFragment
  */
-public class SimpleIntroFragment extends IntroFragment {
-    TextView mTitleTextView;
-    TextView mDescriptionTextView;
+public class ImageOnlyIntroFragment extends IntroFragment {
     ImageView mImageView;
-    private View mView;
-    private RelativeLayout mBaseRelativeView;
+    View mView;
+    RelativeLayout mBaseRelativeView;
 
     @Override
     public View getViewToInflate(LayoutInflater inflater, ViewGroup container) {
-        return inflater.inflate(R.layout.base_fragment_layout, container, false);
+        return inflater.inflate(R.layout.image_only_fragment_layout, container, false);
     }
 
     @Override
     public void setTitle(String title) {
-        mTitleTextView.setText(title);
+        Log.w("XIntro", "setTitle(string) should not be called on ImageOnlyIntroFragment.");
     }
 
     @Override
@@ -55,7 +55,7 @@ public class SimpleIntroFragment extends IntroFragment {
 
     @Override
     public void setDescription(String description) {
-        mDescriptionTextView.setText(description);
+        Log.w("XIntro", "setDescription(string) should not be called on ImageOnlyIntroFragment.");
     }
 
     @Override
@@ -63,6 +63,7 @@ public class SimpleIntroFragment extends IntroFragment {
         if (backgroundColor == 0) {
             return;
         }
+
         mBaseRelativeView.setBackgroundColor(backgroundColor);
     }
 
@@ -71,7 +72,8 @@ public class SimpleIntroFragment extends IntroFragment {
         if (titleColor == 0) {
             return;
         }
-        mTitleTextView.setTextColor(titleColor);
+
+        Log.w("XIntro", "setTitleTextColor(int) should not be called on ImageOnlyIntroFragment.");
     }
 
     @Override
@@ -79,23 +81,18 @@ public class SimpleIntroFragment extends IntroFragment {
         if (descriptionTextColor == 0) {
             return;
         }
-        mDescriptionTextView.setTextColor(descriptionTextColor);
+
+        Log.w("XIntro", "setDescriptionTextColor(int) should not be called on ImageOnlyIntroFragment.");
     }
 
     @Override
-    public void initialize(View view, IntroFragmentModel introFragmentModel) {
+    public void initialize(View view, IntroFragmentEntity introFragmentEntity) {
         mView = view;
-        mTitleTextView = (TextView) mView.findViewById(R.id.titleTextView);
-        mDescriptionTextView = (TextView) mView.findViewById(R.id.descriptionTextView);
         mImageView = (ImageView) mView.findViewById(R.id.imageView);
         mBaseRelativeView = (RelativeLayout) mView.findViewById(R.id.baseRelativeView);
 
-        setTitle(introFragmentModel.getTitle());
-        setDescription(introFragmentModel.getDescription());
-        setImage(introFragmentModel.getImage());
-        setBackgroundColor(introFragmentModel.getBackgroundColor());
-        setTitleTextColor(introFragmentModel.getTitleTextColor());
-        setDescriptionTextColor(introFragmentModel.getDescriptionTextColor());
+        setImage(introFragmentEntity.getImage());
+        setBackgroundColor(introFragmentEntity.getBackgroundColor());
     }
 
 }

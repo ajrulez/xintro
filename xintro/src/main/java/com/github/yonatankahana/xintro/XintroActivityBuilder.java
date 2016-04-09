@@ -9,7 +9,7 @@ import com.github.yonatankahana.xintro.actionstemplate.ActionTemplate;
 import com.github.yonatankahana.xintro.activities.AppStaticContext;
 import com.github.yonatankahana.xintro.activities.XintroActivity;
 import com.github.yonatankahana.xintro.imageloaders.ImageLoader;
-import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
+import com.github.yonatankahana.xintro.introfragment.entities.IntroFragmentEntity;
 import com.github.yonatankahana.xintro.transformers.ZoomOutPageTransformer;
 
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ import java.util.List;
  */
 public class XintroActivityBuilder {
     private static Context mContext;
-    private ArrayList<IntroFragmentModel> introFragmentModelList;
+    private ArrayList<IntroFragmentEntity> introFragmentEntityList;
     private ViewPager.PageTransformer pageTransformer = new ZoomOutPageTransformer();
     @Nullable
     private XintroActivity.OnFragmentChangedListener onFragmentChangedListener = null;
@@ -39,7 +39,7 @@ public class XintroActivityBuilder {
 
     private XintroActivityBuilder(Context context) {
         mContext = context;
-        introFragmentModelList = new ArrayList<>();
+        introFragmentEntityList = new ArrayList<>();
     }
 
     /**
@@ -53,13 +53,13 @@ public class XintroActivityBuilder {
     }
 
     /**
-     * Add introFragmentModel to xintro activity builder.
+     * Add introFragmentEntity to xintro activity builder.
      *
-     * @param introFragmentModel the introFragmentModel
+     * @param introFragmentEntity the introFragmentEntity
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder addFragment(IntroFragmentModel introFragmentModel) {
-        introFragmentModelList.add(introFragmentModel);
+    public XintroActivityBuilder addFragment(IntroFragmentEntity introFragmentEntity) {
+        introFragmentEntityList.add(introFragmentEntity);
         return this;
     }
 
@@ -69,9 +69,9 @@ public class XintroActivityBuilder {
      * @param introFragmentAttributes the introFragmentAttributes
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder addFragments(IntroFragmentModel... introFragmentAttributes) {
-        for (IntroFragmentModel introFragmentAttribute : introFragmentAttributes) {
-            introFragmentModelList.add(introFragmentAttribute);
+    public XintroActivityBuilder addFragments(IntroFragmentEntity... introFragmentAttributes) {
+        for (IntroFragmentEntity introFragmentAttribute : introFragmentAttributes) {
+            introFragmentEntityList.add(introFragmentAttribute);
         }
 
         return this;
@@ -83,20 +83,20 @@ public class XintroActivityBuilder {
      * @param introFragmentAttributes the introFragmentAttributes
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder addFragments(List<IntroFragmentModel> introFragmentAttributes) {
-        introFragmentModelList.addAll(introFragmentAttributes);
+    public XintroActivityBuilder addFragments(List<IntroFragmentEntity> introFragmentAttributes) {
+        introFragmentEntityList.addAll(introFragmentAttributes);
 
         return this;
     }
 
     /**
-     * Remove introFragmentModel from xintro activity builder.
+     * Remove introFragmentEntity from xintro activity builder.
      *
-     * @param introFragmentModel the introFragmentModel
+     * @param introFragmentEntity the introFragmentEntity
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder removeFragment(IntroFragmentModel introFragmentModel) {
-        introFragmentModelList.remove(introFragmentModel);
+    public XintroActivityBuilder removeFragment(IntroFragmentEntity introFragmentEntity) {
+        introFragmentEntityList.remove(introFragmentEntity);
         return this;
     }
 
@@ -107,7 +107,7 @@ public class XintroActivityBuilder {
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
     public XintroActivityBuilder removeFragment(int fragmentPos) {
-        introFragmentModelList.remove(fragmentPos);
+        introFragmentEntityList.remove(fragmentPos);
         return this;
     }
 
@@ -127,11 +127,11 @@ public class XintroActivityBuilder {
     /**
      * Sets fragments list.
      *
-     * @param introFragmentModelList the fragments list
+     * @param introFragmentEntityList the fragments list
      * @return the XintroActivityBuilder object with the changed parameters. You can keep adjusting the builder with one-line.
      */
-    public XintroActivityBuilder setIntroFragmentModelList(ArrayList<IntroFragmentModel> introFragmentModelList) {
-        this.introFragmentModelList = introFragmentModelList;
+    public XintroActivityBuilder setIntroFragmentEntityList(ArrayList<IntroFragmentEntity> introFragmentEntityList) {
+        this.introFragmentEntityList = introFragmentEntityList;
         return this;
     }
 
@@ -227,7 +227,7 @@ public class XintroActivityBuilder {
      * @return the intent
      */
     public Intent compile() {
-        AppStaticContext.introFragmentModelArrayList = introFragmentModelList;
+        AppStaticContext.introFragmentEntityArrayList = introFragmentEntityList;
         AppStaticContext.onFragmentChangedListener = onFragmentChangedListener;
         AppStaticContext.onIntroductionFinishedListener = onIntroductionFinishedListener;
         AppStaticContext.pageTransformer = pageTransformer;

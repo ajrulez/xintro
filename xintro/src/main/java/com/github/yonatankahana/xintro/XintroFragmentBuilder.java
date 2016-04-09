@@ -4,10 +4,10 @@ import android.annotation.TargetApi;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 
-import com.github.yonatankahana.xintro.introduction.ImageOnlyIntroFragment;
-import com.github.yonatankahana.xintro.introduction.IntroFragment;
-import com.github.yonatankahana.xintro.introduction.SimpleIntroFragment;
-import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
+import com.github.yonatankahana.xintro.introfragment.ImageOnlyIntroFragment;
+import com.github.yonatankahana.xintro.introfragment.IntroFragment;
+import com.github.yonatankahana.xintro.introfragment.SimpleIntroFragment;
+import com.github.yonatankahana.xintro.introfragment.entities.IntroFragmentEntity;
 
 /**
  * XintroFragmentBuilder is builder that helps to create
@@ -16,7 +16,7 @@ import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
  *
  * @author Yonatan Kahana
  * @see IntroFragment
- * @see IntroFragmentModel
+ * @see IntroFragmentEntity
  * @see SimpleIntroFragment
  * @see ImageOnlyIntroFragment
  */
@@ -144,7 +144,7 @@ public class XintroFragmentBuilder {
      *
      * @return the intro fragment model
      */
-    public IntroFragmentModel compile() {
-        return new IntroFragmentModel(introFragment == null ? new SimpleIntroFragment() /* its the default */ : introFragment, title, description, image, backgroundColor, imageElevation, titleTextColor, descriptionTextColor);
+    public IntroFragmentEntity compile() {
+        return new IntroFragmentEntity(introFragment == null ? new SimpleIntroFragment() /* its the default */ : introFragment, title, description, image, backgroundColor, imageElevation, titleTextColor, descriptionTextColor);
     }
 }

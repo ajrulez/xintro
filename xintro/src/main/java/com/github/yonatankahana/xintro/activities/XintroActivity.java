@@ -25,8 +25,8 @@ import com.github.yonatankahana.xintro.imageloaders.GlideImageLoader;
 import com.github.yonatankahana.xintro.imageloaders.ImageLoader;
 import com.github.yonatankahana.xintro.imageloaders.PicassoImageLoader;
 import com.github.yonatankahana.xintro.imageloaders.SimpleImageLoader;
-import com.github.yonatankahana.xintro.introduction.IntroFragment;
-import com.github.yonatankahana.xintro.introduction.entities.IntroFragmentModel;
+import com.github.yonatankahana.xintro.introfragment.IntroFragment;
+import com.github.yonatankahana.xintro.introfragment.entities.IntroFragmentEntity;
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
@@ -36,7 +36,7 @@ import java.util.List;
  * The type Xintro activity.
  */
 public class XintroActivity extends FragmentActivity {
-    private List<IntroFragmentModel> introFragmentModelsList = new ArrayList<>();
+    private List<IntroFragmentEntity> introFragmentModelsList = new ArrayList<>();
     private ViewPager.PageTransformer pageTransformer;
     private OnIntroductionFinishedListener onIntroductionFinishedListener;
     private OnFragmentChangedListener onFragmentChangedListener;
@@ -57,7 +57,7 @@ public class XintroActivity extends FragmentActivity {
      *
      * @return the intro fragment model list
      */
-    public List<IntroFragmentModel> getIntroFragmentModelsList() {
+    public List<IntroFragmentEntity> getIntroFragmentModelsList() {
         return introFragmentModelsList;
     }
 
@@ -66,7 +66,7 @@ public class XintroActivity extends FragmentActivity {
      *
      * @param introFragmentModelsList the intro fragment model list
      */
-    public void setIntroFragmentModelsList(List<IntroFragmentModel> introFragmentModelsList) {
+    public void setIntroFragmentModelsList(List<IntroFragmentEntity> introFragmentModelsList) {
         introFragmentModelsList = introFragmentModelsList;
     }
 
@@ -376,8 +376,8 @@ public class XintroActivity extends FragmentActivity {
     public void initialize() {
         AppStaticContext.introductionActivity = this;
 
-        if (AppStaticContext.introFragmentModelArrayList != null) {
-            introFragmentModelsList = AppStaticContext.introFragmentModelArrayList;
+        if (AppStaticContext.introFragmentEntityArrayList != null) {
+            introFragmentModelsList = AppStaticContext.introFragmentEntityArrayList;
         }
         if (AppStaticContext.onFragmentChangedListener != null) {
             onFragmentChangedListener = AppStaticContext.onFragmentChangedListener;
@@ -465,7 +465,7 @@ public class XintroActivity extends FragmentActivity {
         public Fragment getItem(int i) {
             IntroFragment fragment = introFragmentModelsList.get(i).getFragment();
             Bundle bundle = new Bundle();
-            bundle.putParcelable("introFragmentModelObject", introFragmentModelsList.get(i));
+            bundle.putParcelable("introFragmentEntityObject", introFragmentModelsList.get(i));
             fragment.setArguments(bundle);
             return fragment;
         }
@@ -477,7 +477,7 @@ public class XintroActivity extends FragmentActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return "IntroFragmentModel " + (position + 1);
+            return "IntroFragmentEntity " + (position + 1);
         }
     }
 
