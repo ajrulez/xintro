@@ -47,18 +47,17 @@ compile 'com.github.yonatankahana:xintro:1.1'
 ##Milestones
 - [ ] Full RTL support
 - [ ] More fragment impl's for selection
-- [ ] Wiki pages
 - [ ] Supoort lower SDK levels
 
 
 ##Report issue
-If you found any bug or any idea how to make this project better, please [Create an Issue](https://github.com/yonatankahana/xintro/issues/new).
+If you found any bug or any idea how to make this project better, please [Create an Issue](https://github.com/yonatankahana/xintro/issues/new) and let me know.
 
 ##Getting started
 Checkout the [wiki](https://github.com/yonatankahana/xintro/wiki/) for examples and getting started guide.
 
 ##Compatibility
-XIntro can be used from min sdk 16.
+XIntro can be used from [Android API 14](http://developer.android.com/about/versions/android-4.0.html).
 
 ##Example
 ![example gif](http://i.giphy.com/3oGRFqJHpzI8Uj6nni.gif "Example gif")
